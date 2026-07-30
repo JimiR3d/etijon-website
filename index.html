@@ -14,19 +14,19 @@
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/home.css?v=100">
+  <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
 
-  <!-- Dynamic Site Header -->
+  <!-- Dynamic Site Header (Sticky Transparent Glass Navigation) -->
   <header class="site-header" id="header-placeholder"></header>
 
-  <!-- Hero Section (Exact Figma Match) -->
+  <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-container">
       <div class="hero-content">
         <h1 class="hero-title">
-          SUPPORTING CHILDREN,<br>
+          SUPPORTING CHILDREN,
           <span class="text-gold">IMPACTING LIVES</span>
         </h1>
         <p class="hero-subtitle">
@@ -36,18 +36,16 @@
           <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-7439" target="_blank" rel="noopener noreferrer" class="btn-hero-primary">Donate</a>
           <a href="get-involved.html" class="btn-hero-outline">
             Get Involved
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Impact Stats Banner (Exact Figma Match) -->
+  <!-- Impact Stats Banner -->
   <section class="impact-stats-section">
     <div class="stats-container">
-      
-      <!-- Stat 1 -->
       <div class="stat-card">
         <div class="stat-icon-wrapper">
           <img src="assets/images/icons/people.png" alt="Students Supported" class="stat-icon-img">
@@ -57,8 +55,6 @@
           <span class="stat-label">Students<br>Supported</span>
         </div>
       </div>
-
-      <!-- Stat 2 -->
       <div class="stat-card">
         <div class="stat-icon-wrapper">
           <img src="assets/images/icons/book.png" alt="Exercise Books" class="stat-icon-img">
@@ -68,95 +64,110 @@
           <span class="stat-label">Exercise<br>Books</span>
         </div>
       </div>
-
-      <!-- Stat 3 -->
       <div class="stat-card">
         <div class="stat-icon-wrapper">
-          <img src="assets/images/icons/shopping-bag.png" alt="Backpacks Distributed" class="stat-icon-img">
+          <img src="assets/images/icons/computer.png" alt="Digital Literacy" class="stat-icon-img">
         </div>
         <div class="stat-info">
-          <span class="stat-number">200+</span>
-          <span class="stat-label">Backpacks with School<br>supplies distributed</span>
+          <span class="stat-number">100+</span>
+          <span class="stat-label">Digital<br>Literacy</span>
         </div>
       </div>
-
-      <!-- Stat 4 -->
       <div class="stat-card">
         <div class="stat-icon-wrapper">
-          <img src="assets/images/icons/lovely.png" alt="Sanitary Pads" class="stat-icon-img">
+          <img src="assets/images/icons/hospital.png" alt="Health Outreach" class="stat-icon-img">
         </div>
         <div class="stat-info">
-          <span class="stat-number">200+</span>
-          <span class="stat-label">Softcare Sanitary<br>Pads</span>
+          <span class="stat-number">1500+</span>
+          <span class="stat-label">Health<br>Outreach</span>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- Our Programs Section (Exact Figma 4-Column Outline Cards) -->
+  <!-- Our Programs Summary Section -->
   <section class="home-programs-section">
     <div class="section-container">
       
-      <span class="section-badge">OUR PROGRAMS</span>
-      <h2 class="section-heading">What We Have to Offer</h2>
+      <div class="section-header">
+        <div>
+          <span class="section-badge">WHAT WE DO</span>
+          <h2 class="section-heading">Our Programs</h2>
+        </div>
+        <a href="our-programs.html" class="link-view-all">
+          View all programs
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
 
-      <div class="programs-4col-grid">
+      <div class="programs-cards-grid">
         
-        <!-- Card 01: Backpacks For Students -->
-        <a href="our-programs.html" class="program-outline-card">
-          <div>
-            <div class="card-num">01</div>
-            <h3 class="card-title">Backpacks For Students</h3>
-            <p class="card-desc">Providing backpacks filled with essential school supplies to help students succeed academically.</p>
+        <!-- Program Card 1: Educational Support -->
+        <div class="home-program-card">
+          <div class="program-img-wrapper">
+            <img src="assets/images/program_backpack.jpg" alt="Educational Support & Backpack Initiative" class="program-img">
           </div>
-          <div class="card-bottom-row">
-            <span class="card-link-text">Learn More &rarr;</span>
+          <div class="program-content">
+            <h3 class="program-title">Educational Support</h3>
+            <p class="program-desc">
+              Providing essential school supplies, backpacks, and exercise books to ensure every child is equipped for learning.
+            </p>
+            <a href="our-programs.html" class="program-link">Learn More &rarr;</a>
           </div>
-        </a>
+        </div>
 
-        <!-- Card 02: Adolescent Health & Wellness -->
-        <a href="our-programs.html" class="program-outline-card">
-          <div>
-            <div class="card-num">02</div>
-            <h3 class="card-title">Adolescent Health & Wellness</h3>
-            <p class="card-desc">Promoting health education and awareness programs for adolescents and young adults.</p>
+        <!-- Program Card 2: Adolescent Health -->
+        <div class="home-program-card">
+          <div class="program-img-wrapper">
+            <img src="assets/images/program_health.jpg" alt="Adolescent Health & Wellness" class="program-img">
           </div>
-          <div class="card-bottom-row">
-            <span class="card-link-text">Learn More &rarr;</span>
+          <div class="program-content">
+            <h3 class="program-title">Adolescent Health & Wellness</h3>
+            <p class="program-desc">
+              Promoting health education, menstrual hygiene awareness, and wellness programs for young people.
+            </p>
+            <a href="our-programs.html" class="program-link">Learn More &rarr;</a>
           </div>
-        </a>
+        </div>
 
-        <!-- Card 03: Bridging the Digital Divide -->
-        <a href="our-programs.html" class="program-outline-card">
-          <div>
-            <div class="card-num">03</div>
-            <h3 class="card-title">Bridging the Digital Divide</h3>
-            <p class="card-desc">Providing access to digital tools, technology and learning resources</p>
+        <!-- Program Card 3: Digital Divide -->
+        <div class="home-program-card">
+          <div class="program-img-wrapper">
+            <img src="assets/images/program_digital.jpg" alt="Bridging the Digital Divide" class="program-img">
           </div>
-          <div class="card-bottom-row">
-            <span class="card-link-text">Learn More &rarr;</span>
+          <div class="program-content">
+            <h3 class="program-title">Bridging the Digital Divide</h3>
+            <p class="program-desc">
+              Empowering youth with digital literacy, computer access, and modern technology skills.
+            </p>
+            <a href="our-programs.html" class="program-link">Learn More &rarr;</a>
           </div>
-        </a>
-
-        <!-- Card 04: School Uniform Program -->
-        <a href="our-programs.html" class="program-outline-card">
-          <div>
-            <div class="card-num">04</div>
-            <h3 class="card-title">School Uniform Program</h3>
-            <p class="card-desc">Ensuring students have school uniforms so they can attend school with dignity and confidence</p>
-          </div>
-          <div class="card-bottom-row">
-            <span class="card-link-text">Learn More &rarr;</span>
-          </div>
-        </a>
+        </div>
 
       </div>
 
     </div>
   </section>
 
-  <!-- CTA Banner Section (Help Us Impact Lives - Exact Figma Match) -->
+  <!-- Impact Gallery Section -->
+  <section class="home-gallery-section">
+    <div class="section-container">
+      
+      <div class="section-header">
+        <div>
+          <span class="section-badge">SEE THE DIFFERENCE</span>
+          <h2 class="section-heading">Impact Gallery</h2>
+        </div>
+        <a href="gallery.html" class="link-view-all">
+          View full gallery
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
   <section class="cta-banner-section">
     <div class="cta-banner-container">
       <div class="cta-banner-card">
