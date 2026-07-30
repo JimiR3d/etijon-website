@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Etijon Foundation Inc.</title>
+  <meta name="description" content="Explore moments from Etijon Foundation's outreach programs, events, and the vibrant communities we serve.">
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
+</head>
+<body>
+
+  <!-- Dynamic Site Header -->
+  <header class="site-header" id="header-placeholder"></header>
+
+  <!-- Page Content Container -->
+  <main class="gallery-page-container">
+    
+    <!-- Back Home Link -->
+    <div class="back-link-wrapper">
+      <a href="index.html" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back Home
+      </a>
+    </div>
+
+    <!-- Page Header -->
+    <div class="programs-page-header">
+      <span class="section-header-badge">IN THE FIELD</span>
+      <h1 class="section-main-heading">Gallery</h1>
+      <p class="programs-page-subtitle">Moments from our programs, events and the communities we serve.</p>
+    </div>
+
+    <!-- Masonry 3-Column Gallery Grid -->
+    <section class="gallery-grid">
+      
+      <!-- Column 1 -->
+      <div class="gallery-column">
+        
+        <!-- Item 1 (Visible) -->
+        <div class="gallery-item">
+          <img src="assets/images/gallery/gallery_photo_1.jpg" alt="Raising voices, raising awareness">
+          <div class="gallery-caption-badge">Raising voices, raising awareness</div>
+        </div>
+
+        <!-- Item 2 (Visible) -->
+        <div class="gallery-item">
+          <img src="assets/images/gallery/gallery_photo_3.jpg" alt="Learning without limits">
+          <div class="gallery-caption-badge">Learning without limits</div>
+        </div>
+
+        <!-- Item 3 (Hidden until View More) -->
+        <div class="gallery-item hidden-item">
+          <img src="assets/images/gallery/gallery_photo_7.jpg" alt="A community united for change">
+          <div class="gallery-caption-badge">A community united for change</div>
+        </div>
+
+        <!-- Item 4 (Hidden until View More) -->
+        <div class="gallery-item hidden-item">
+          <img src="assets/images/gallery/gallery_photo_10.jpg" alt="Creating safe spaces for every girl">
+          <div class="gallery-caption-badge">Creating safe spaces for every girl</div>
+        </div>
+
+      </div>
+
+      <!-- Column 2 -->
+      <div class="gallery-column">
+        
+        <!-- Item 5 (Visible) -->
+        <div class="gallery-item">
+          <img src="assets/images/gallery/gallery_photo_2.jpg" alt="Every girl deserves menstrual dignity">
+          <div class="gallery-caption-badge">Every girl deserves menstrual dignity</div>
+        </div>
+
+        <!-- Item 6 (Visible) -->
+        <div class="gallery-item">
+          <img src="assets/images/gallery/gallery_photo_4.jpg" alt="Breaking the stigma, one school at a time">
+          <div class="gallery-caption-badge">Breaking the stigma, one school at a time</div>
+        </div>
+
+        <!-- Item 7 (Hidden until View More) -->
+        <div class="gallery-item hidden-item">
+          <img src="assets/images/gallery/gallery_photo_8.jpg" alt="Confidence begins with care">
+          <div class="gallery-caption-badge">Confidence begins with care</div>
+        </div>
+
+        <!-- Item 8 (Hidden until View More) -->
+        <div class="gallery-item hidden-item">
+          <img src="assets/images/gallery/gallery_photo_11.jpg" alt="Supporting girls beyond the classroom">
+          <div class="gallery-caption-badge">Supporting girls beyond the classroom</div>
+        </div>
+
+      </div>
+
+      <!-- Column 3 -->
+      <div class="gallery-column">
+        
+        <!-- Item 9 (Visible) -->
+        <div class="gallery-item">
+          <img src="assets/images/gallery/gallery_photo_5.jpg" alt="Keeping girls in school, every month">
+          <div class="gallery-caption-badge">Keeping girls in school, every month</div>
+        </div>
+
+        <!-- Item 10 (Visible) -->
+        <div class="gallery-item">
+          <img src="assets/images/gallery/gallery_photo_6.jpg" alt="Pads today, confidence always">
+          <div class="gallery-caption-badge">Pads today, confidence always</div>
+        </div>
+
+        <!-- Item 11 (Hidden until View More) -->
+        <div class="gallery-item hidden-item">
+          <img src="assets/images/gallery/gallery_photo_9.jpg" alt="Creating a period-friendly future">
+          <div class="gallery-caption-badge">Creating a period-friendly future</div>
+        </div>
+
+        <!-- Item 12 (Hidden until View More) -->
+        <div class="gallery-item hidden-item">
+          <img src="assets/images/gallery/gallery_photo_12.jpg" alt="Empowering the next generation">
+          <div class="gallery-caption-badge">Empowering the next generation</div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- View More (6) Toggle Button -->
+    <div class="gallery-toggle-wrapper">
+      <button id="btn-gallery-toggle" class="btn-view-toggle">View More (6)</button>
+    </div>
+
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="gallery-lightbox" id="gallery-lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <img src="" alt="" id="lightbox-img" class="lightbox-img">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Dynamic Site Footer -->
+  <footer class="site-footer" id="footer-placeholder"></footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/header-footer.js"></script>
+  <script src="assets/js/gallery.js"></script>
+
+</body>
+</html>

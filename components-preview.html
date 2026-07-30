@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etijon Foundation — Header & Footer Components Preview</title>
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <style>
+    .preview-container {
+      padding: 60px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .preview-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary-color);
+      margin-bottom: 12px;
+    }
+    .preview-subtitle {
+      font-size: 1.1rem;
+      color: var(--muted-text);
+      margin-bottom: 40px;
+    }
+    .preview-box {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 60px;
+      border: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+<body data-page="home">
+
+  <!-- Shared Header Component -->
+  <header class="site-header"></header>
+
+  <main class="preview-container">
+    <h1 class="preview-title">Step 2: Shared Header & Footer Components</h1>
+    <p class="preview-subtitle">
+      Reusable Header/Nav and Glassmorphism Footer components built with pure CSS variables.
+    </p>
+
+    <div class="preview-box">
+      <h3>Header Features</h3>
+      <p>
+        • Pixel-perfect branding using <code>var(--primary-color)</code> and <code>var(--secondary-color)</code>.<br>
+        • Active nav link underline indicator.<br>
+        • Responsive mobile drawer toggle.<br>
+        • High-contrast "Donate Now" CTA button.
+      </p>
+    </div>
+
+    <div class="preview-box">
+      <h3>Footer Features</h3>
+      <p>
+        • Frosted glassmorphism card over background photo.<br>
+        • Quick Links navigation column.<br>
+        • Contact email in secondary gold token.<br>
+        • Copyright and legal links bar.
+      </p>
+    </div>
+  </main>
+
+  <!-- Shared Footer Component -->
+  <footer class="site-footer"></footer>
+
+  <script src="assets/js/header-footer.js"></script>
+</body>
+</html>

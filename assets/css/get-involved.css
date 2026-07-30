@@ -1,0 +1,200 @@
+/* Etijon Foundation - Get Involved Page Styles */
+
+.get-involved-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 24px 100px;
+}
+
+/* ==========================================================================
+   PRIMARY ACTION CARDS (VOLUNTEER & DONATE)
+   ========================================================================== */
+.action-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+  margin-bottom: 80px;
+}
+
+.action-card {
+  background-color: #FFFFFF;
+  border: 1.5px solid rgba(0, 29, 80, 0.12);
+  border-radius: 28px;
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 29, 80, 0.05);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.action-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 29, 80, 0.1);
+  border-color: var(--secondary-color);
+}
+
+.action-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.action-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(235, 172, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-card-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.action-card-subtitle {
+  font-size: 0.95rem;
+  color: #555555;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* Volunteer Opportunities List */
+.volunteer-list-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+}
+
+.volunteer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.volunteer-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.94rem;
+  color: #444444;
+  font-weight: 500;
+}
+
+.volunteer-list-item svg {
+  color: var(--secondary-color);
+  flex-shrink: 0;
+}
+
+/* Zelle Box Container */
+.zelle-box-wrapper {
+  background-color: #0A0F1D;
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.zelle-logo-img {
+  max-width: 140px;
+  height: auto;
+}
+
+.zelle-email {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.btn-card-action {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 16px 24px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  box-shadow: 0 6px 16px rgba(0, 29, 80, 0.2);
+}
+
+.btn-card-action:hover {
+  background-color: #00286e;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   SUGGESTED DONATION TIERS SECTION
+   ========================================================================== */
+.donation-tiers-section {
+  margin-top: 60px;
+}
+
+.tiers-section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+.donation-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.tier-card-img-link {
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.tier-card-img-link:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.22);
+}
+
+.tier-card-full-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+  .action-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-tiers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .donation-tiers-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,73 @@
+/* Etijon Foundation Design Tokens & Global CSS Variables */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Strict User Design Tokens */
+  --primary-color: #001D50;
+  --secondary-color: #EBAC00;
+  --bg-color: #1E1E1E;
+  --font-family: 'Inter', sans-serif;
+
+  /* Neutral & Functional Colors */
+  --white: #FFFFFF;
+  --dark-text: #0F172A;
+  --body-text: #334155;
+  --muted-text: #64748B;
+  --card-bg: #FFFBEB;
+  --border-color: #E2E8F0;
+
+  /* Component Dimensions & Accents */
+  --nav-height: 80px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --transition-fast: 0.2s ease;
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 25px -5px rgba(0, 29, 80, 0.2);
+  --shadow-lg: 0 20px 30px -10px rgba(0, 0, 0, 0.25);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-family);
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--bg-color);
+  color: var(--dark-text);
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  background-color: #FAFAFA;
+  color: var(--body-text);
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+}
