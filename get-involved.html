@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
   <link rel="stylesheet" href="assets/css/get-involved.css">
 </head>
 <body>
@@ -76,7 +77,7 @@
         <a href="contact-us.html" class="btn-card-action">Volunteer Now</a>
       </div>
 
-      <!-- Donate Card (Recreated Exact Figma Group 39.png Box) -->
+      <!-- Donate Card (Direct Zeffy Donation Link & Zelle Info) -->
       <div class="action-card" id="donate-card">
         <div>
           <div class="action-card-header">
@@ -93,7 +94,7 @@
             <div class="zelle-email-display">info@etijon.org</div>
           </div>
         </div>
-        <a href="#donate-card" class="btn-card-action" id="btn-donate-now-action">Donate Now</a>
+        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-7439" target="_blank" rel="noopener noreferrer" class="btn-card-action">Donate Now</a>
       </div>
 
     </section>
@@ -105,22 +106,22 @@
       <div class="donation-tiers-grid">
         
         <!-- Tier 1: $25 -->
-        <a href="#donate-card" class="tier-card-img-link tier-trigger" data-amount="$25" data-tier="School Supplies">
+        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-7439" target="_blank" rel="noopener noreferrer" class="tier-card-img-link tier-trigger" data-amount="$25" data-tier="School Supplies">
           <img src="assets/images/clean_tier_1.png" alt="School Supplies $25" class="tier-card-full-img">
         </a>
 
         <!-- Tier 2: $50 -->
-        <a href="#donate-card" class="tier-card-img-link tier-trigger" data-amount="$50" data-tier="Backpack Support">
+        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-7439" target="_blank" rel="noopener noreferrer" class="tier-card-img-link tier-trigger" data-amount="$50" data-tier="Backpack Support">
           <img src="assets/images/clean_tier_2.png" alt="Backpack Support $50" class="tier-card-full-img">
         </a>
 
         <!-- Tier 3: $100 -->
-        <a href="#donate-card" class="tier-card-img-link tier-trigger" data-amount="$100" data-tier="Student Assistance">
+        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-7439" target="_blank" rel="noopener noreferrer" class="tier-card-img-link tier-trigger" data-amount="$100" data-tier="Student Assistance">
           <img src="assets/images/clean_tier_3.png" alt="Student Assistance $100" class="tier-card-full-img">
         </a>
 
         <!-- Tier 4: $500 -->
-        <a href="#donate-card" class="tier-card-img-link tier-trigger" data-amount="$500" data-tier="Program Sponsorship">
+        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-7439" target="_blank" rel="noopener noreferrer" class="tier-card-img-link tier-trigger" data-amount="$500" data-tier="Program Sponsorship">
           <img src="assets/images/clean_tier_4.png" alt="Program Sponsorship $500" class="tier-card-full-img">
         </a>
 
@@ -129,7 +130,7 @@
 
   </main>
 
-  <!-- Interactive Donation Lightbox Modal (100% Hidden Until Clicked) -->
+  <!-- Interactive Donation Lightbox Modal -->
   <div class="donation-modal-overlay" id="donation-modal">
     <div style="position: relative; background: #FFFFFF; padding: 40px 36px; border-radius: 28px; color: var(--primary-color); max-width: 440px; width: 100%; text-align: center; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);">
       
@@ -138,15 +139,14 @@
       </button>
 
       <div style="font-size: 0.82rem; font-weight: 800; color: var(--secondary-color); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px;">THANK YOU FOR YOUR SUPPORT</div>
-      <h3 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 12px;" id="modal-tier-title">Donate $25</h3>
-      <p style="font-size: 0.92rem; color: #555555; margin-bottom: 24px; line-height: 1.5;" id="modal-tier-desc">Your generous donation helps us provide essential educational tools and services.</p>
+      <h3 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 12px;" id="modal-tier-title">Donate to Change Lives</h3>
+      <p style="font-size: 0.92rem; color: #555555; margin-bottom: 24px; line-height: 1.5;" id="modal-tier-desc">Your generous donation helps us provide essential educational tools, health resources, and digital access to children in need.</p>
 
-      <div style="background-color: #0A0F1D; padding: 20px; border-radius: 18px; margin-bottom: 24px; color: #FFFFFF;">
-        <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--secondary-color); font-weight: 800; margin-bottom: 6px;">ZELLE PAYMENT MEMO</div>
-        <div style="font-size: 1.25rem; font-weight: 800; letter-spacing: 0.5px;">info@etijon.org</div>
+      <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-7439" target="_blank" rel="noopener noreferrer" style="display: block; background: var(--primary-color); color: #FFFFFF; font-weight: 700; padding: 16px 28px; border-radius: 12px; border: none; text-decoration: none; margin-bottom: 12px;">Proceed to Zeffy Donation Form &rarr;</a>
+
+      <div style="background-color: #F4F6F9; padding: 16px; border-radius: 14px; color: var(--primary-color); font-size: 0.88rem;">
+        Or donate via Zelle memo: <strong style="color: var(--primary-color);">info@etijon.org</strong>
       </div>
-
-      <button id="btn-modal-close-action" style="background: var(--primary-color); color: #FFFFFF; font-weight: 700; padding: 14px 28px; border-radius: 12px; border: none; cursor: pointer; width: 100%;">Close</button>
     </div>
   </div>
 
@@ -155,51 +155,6 @@
 
   <!-- Component Inserter Script -->
   <script src="assets/js/header-footer.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const modal = document.getElementById('donation-modal');
-      const modalClose = document.getElementById('donation-modal-close');
-      const btnCloseAction = document.getElementById('btn-modal-close-action');
-      const modalTitle = document.getElementById('modal-tier-title');
-      const modalDesc = document.getElementById('modal-tier-desc');
-      const triggers = document.querySelectorAll('.tier-trigger, #btn-donate-now-action');
-
-      function closeModal() {
-        if (modal) {
-          modal.classList.remove('active');
-          document.body.style.overflow = '';
-        }
-      }
-
-      triggers.forEach(trigger => {
-        trigger.addEventListener('click', (e) => {
-          e.preventDefault();
-          const amount = trigger.getAttribute('data-amount') || '';
-          const tier = trigger.getAttribute('data-tier') || 'General Donation';
-          
-          modalTitle.textContent = amount ? `Donate ${amount} — ${tier}` : 'Donate to Etijon Foundation';
-          modalDesc.textContent = `You can easily complete your ${amount || ''} contribution via Zelle using our registered email address: info@etijon.org`;
-          
-          if (modal) {
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-          }
-        });
-      });
-
-      if (modalClose) modalClose.addEventListener('click', closeModal);
-      if (btnCloseAction) btnCloseAction.addEventListener('click', closeModal);
-
-      if (modal) {
-        modal.addEventListener('click', (e) => {
-          if (e.target === modal) {
-            closeModal();
-          }
-        });
-      }
-    });
-  </script>
 
 </body>
 </html>

@@ -1,5 +1,7 @@
 /* Etijon Foundation Header & Footer Reusable Injection Script */
 
+const ZEFFY_DONATE_URL = "https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-7439";
+
 const HEADER_HTML = `
   <div class="header-container">
     <nav class="main-nav">
@@ -21,7 +23,7 @@ const HEADER_HTML = `
       </div>
 
       <div class="nav-actions">
-        <a href="get-involved.html" class="btn-donate-nav">
+        <a href="${ZEFFY_DONATE_URL}" target="_blank" rel="noopener noreferrer" class="btn-donate-nav">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
           </svg>
@@ -49,7 +51,7 @@ const FOOTER_HTML = `
         Empowering communities through education, health awareness and humanitarian service.
       </p>
       <div class="footer-contact-link">
-        Contact: <span>info@etijon.org</span>
+        Contact: <a href="mailto:info@etijon.org" style="color: var(--secondary-color); text-decoration: underline; font-weight: 700;">info@etijon.org</a>
       </div>
     </div>
     

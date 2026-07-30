@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etijon Foundation — Supporting Children, Impacting Lives</title>
-  <meta name="description" content="Etijon Foundation is a non-profit charity promoting academic excellence and healthy futures for children through education, health awareness, and digital access.">
+  <meta name="description" content="Etijon Foundation Inc. is a registered 501(c)(3) non-profit organization dedicated to supporting children and adolescents through education, health awareness, and digital access.">
   
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,26 +17,25 @@
   <link rel="stylesheet" href="assets/css/home.css">
 
   <style>
-    /* Direct Hero Overlay & Transparent Navbar Override */
-    header.site-header.hero-overlay .main-nav {
+    /* Clean transparent navbar overlay for Homepage Hero */
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
       background: transparent !important;
-      background-color: transparent !important;
+      border-bottom: none !important;
       box-shadow: none !important;
-      border: none !important;
-      padding: 12px 0 !important;
+      backdrop-filter: none !important;
     }
-    header.site-header.hero-overlay {
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
-      width: 100% !important;
-      z-index: 1000 !important;
+    .hero-overlay .header-container {
       background: transparent !important;
-      background-color: transparent !important;
-      padding: 24px 0 !important;
+      border: none !important;
+      box-shadow: none !important;
     }
-    .hero-section::before {
-      display: none !important;
+    .hero-overlay::before,
+    .hero-overlay::after {
       content: none !important;
     }
   </style>
@@ -58,7 +57,7 @@
           Promoting academic excellence and healthy futures for children and adolescents through education, health awareness and digital access.
         </p>
         <div class="hero-actions">
-          <a href="#donate" class="btn-hero-primary">Donate</a>
+          <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-7439" target="_blank" rel="noopener noreferrer" class="btn-hero-primary">Donate</a>
           <a href="get-involved.html" class="btn-hero-outline">
             Get Involved
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -91,97 +90,104 @@
       </div>
       <div class="stat-card">
         <div class="stat-icon-wrapper">
-          <img src="assets/images/icons/shopping-bag.png" alt="Backpacks" class="stat-icon-img">
+          <img src="assets/images/icons/computer.png" alt="Digital Literacy" class="stat-icon-img">
         </div>
         <div class="stat-info">
-          <span class="stat-number">200+</span>
-          <span class="stat-label">Backpacks with School<br>supplies distributed</span>
+          <span class="stat-number">100+</span>
+          <span class="stat-label">Digital<br>Literacy</span>
         </div>
       </div>
       <div class="stat-card">
         <div class="stat-icon-wrapper">
-          <img src="assets/images/icons/lovely.png" alt="Sanitary Pads" class="stat-icon-img">
+          <img src="assets/images/icons/hospital.png" alt="Health Outreach" class="stat-icon-img">
         </div>
         <div class="stat-info">
-          <span class="stat-number">200+</span>
-          <span class="stat-label">Softcare Sanitary<br>Pads</span>
+          <span class="stat-number">1500+</span>
+          <span class="stat-label">Health<br>Outreach</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Programs Section -->
-  <section class="programs-section">
-    <div class="programs-container">
-      <span class="section-header-badge">OUR PROGRAMS</span>
-      <h2 class="section-main-heading">What We Have to Offer</h2>
-      <div class="programs-grid">
+  <!-- Our Programs Summary Section -->
+  <section class="home-programs-section">
+    <div class="section-container">
+      
+      <div class="section-header">
+        <div>
+          <span class="section-badge">WHAT WE DO</span>
+          <h2 class="section-heading">Our Programs</h2>
+        </div>
+        <a href="our-programs.html" class="link-view-all">
+          View all programs
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="programs-cards-grid">
         
-        <!-- Card 01 -->
-        <div class="program-card">
-          <div>
-            <div class="program-card-num">01</div>
-            <h3 class="program-card-title">Backpacks For Students</h3>
-            <p class="program-card-desc">Providing backpacks filled with essential school supplies to help students succeed academically.</p>
+        <!-- Program Card 1: Educational Support -->
+        <div class="home-program-card">
+          <div class="program-img-wrapper">
+            <img src="assets/images/program_backpack.jpg" alt="Educational Support & Backpack Initiative" class="program-img">
           </div>
-          <div class="program-card-img-wrapper">
-            <img src="assets/images/program-backpack-clean.png" alt="Backpacks for Students" class="program-card-img">
+          <div class="program-content">
+            <h3 class="program-title">Educational Support</h3>
+            <p class="program-desc">
+              Providing essential school supplies, backpacks, and exercise books to ensure every child is equipped for learning.
+            </p>
+            <a href="our-programs.html" class="program-link">Learn More &rarr;</a>
           </div>
-          <a href="our-programs.html" class="program-card-link">
-            Learn More
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
         </div>
 
-        <!-- Card 02 -->
-        <div class="program-card">
-          <div>
-            <div class="program-card-num">02</div>
-            <h3 class="program-card-title">Adolescent Health & Wellness</h3>
-            <p class="program-card-desc">Promoting health education and awareness programs for adolescents and young adults.</p>
+        <!-- Program Card 2: Adolescent Health -->
+        <div class="home-program-card">
+          <div class="program-img-wrapper">
+            <img src="assets/images/program_health.jpg" alt="Adolescent Health & Wellness" class="program-img">
           </div>
-          <div class="program-card-img-wrapper">
-            <img src="assets/images/program-health-clean.png" alt="Adolescent Health & Wellness" class="program-card-img">
+          <div class="program-content">
+            <h3 class="program-title">Adolescent Health & Wellness</h3>
+            <p class="program-desc">
+              Promoting health education, menstrual hygiene awareness, and wellness programs for young people.
+            </p>
+            <a href="our-programs.html" class="program-link">Learn More &rarr;</a>
           </div>
-          <a href="our-programs.html" class="program-card-link">
-            Learn More
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
         </div>
 
-        <!-- Card 03 -->
-        <div class="program-card">
-          <div>
-            <div class="program-card-num">03</div>
-            <h3 class="program-card-title">Bridging the Digital Divide</h3>
-            <p class="program-card-desc">Providing access to digital tools, technology and learning resources.</p>
+        <!-- Program Card 3: Digital Divide -->
+        <div class="home-program-card">
+          <div class="program-img-wrapper">
+            <img src="assets/images/program_digital.jpg" alt="Bridging the Digital Divide" class="program-img">
           </div>
-          <div class="program-card-img-wrapper">
-            <img src="assets/images/program-digital-clean.png" alt="Bridging Digital Divide" class="program-card-img">
+          <div class="program-content">
+            <h3 class="program-title">Bridging the Digital Divide</h3>
+            <p class="program-desc">
+              Empowering youth with digital literacy, computer access, and modern technology skills.
+            </p>
+            <a href="our-programs.html" class="program-link">Learn More &rarr;</a>
           </div>
-          <a href="our-programs.html" class="program-card-link">
-            Learn More
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <!-- Card 04 -->
-        <div class="program-card">
-          <div>
-            <div class="program-card-num">04</div>
-            <h3 class="program-card-title">School Uniform Program</h3>
-            <p class="program-card-desc">Ensuring students have school uniforms so they can attend school with dignity and confidence.</p>
-          </div>
-          <div class="program-card-img-wrapper">
-            <!-- Uniform Icon illustration -->
-          </div>
-          <a href="our-programs.html" class="program-card-link">
-            Learn More
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
         </div>
 
       </div>
+
+    </div>
+  </section>
+
+  <!-- Impact Gallery Section -->
+  <section class="home-gallery-section">
+    <div class="section-container">
+      
+      <div class="section-header">
+        <div>
+          <span class="section-badge">SEE THE DIFFERENCE</span>
+          <h2 class="section-heading">Impact Gallery</h2>
+        </div>
+        <a href="gallery.html" class="link-view-all">
+          View full gallery
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -194,7 +200,7 @@
           Your support helps provide education, health awareness and opportunities to children and communities in need.
         </p>
         <div class="cta-banner-actions">
-          <a href="#donate" class="btn-cta-gold">Donate Now</a>
+          <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-7439" target="_blank" rel="noopener noreferrer" class="btn-cta-gold">Donate Now</a>
           <a href="get-involved.html" class="btn-cta-gold-outline">Become a Volunteer</a>
         </div>
       </div>

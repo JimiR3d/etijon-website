@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us — Etijon Foundation Inc.</title>
-  <meta name="description" content="Contact Etijon Foundation Inc. for partnerships, volunteer opportunities, donations, or questions about our humanitarian programs.">
+  <meta name="description" content="Get in touch with Etijon Foundation Inc. Send us a message or reach out via email for inquiries, partnerships, and support.">
   
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,6 @@
       <div class="programs-page-header">
         <span class="section-header-badge">WE WOULD LOVE TO HEAR FROM YOU</span>
         <h1 class="section-main-heading">Contact Us</h1>
-        <p class="programs-page-subtitle">Contact us for partnerships, volunteer opportunities or to learn more about our programs</p>
       </div>
 
       <!-- Two-Column Contact Grid -->
@@ -54,25 +53,29 @@
           <div>
             <h2 class="contact-info-card-title">CONTACT INFORMATION</h2>
 
-            <!-- Item 1: Send a Mail -->
+            <!-- Item 1: Send a Mail (Clickable Mailto Link) -->
             <div class="contact-info-item">
               <div class="contact-info-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               </div>
               <div>
                 <div class="contact-info-sublabel">SEND A MAIL</div>
-                <div class="contact-info-value">INFO@ETIJON.ORG</div>
+                <div class="contact-info-value">
+                  <a href="mailto:info@etijon.org" style="color: inherit; text-decoration: underline;">INFO@ETIJON.ORG</a>
+                </div>
               </div>
             </div>
 
-            <!-- Item 2: Visit Our Website -->
+            <!-- Item 2: Visit Our Website (Clickable Web Link) -->
             <div class="contact-info-item">
               <div class="contact-info-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               </div>
               <div>
                 <div class="contact-info-sublabel">VISIT OUR WEBSITE</div>
-                <div class="contact-info-value">WWW.ETIJON.ORG</div>
+                <div class="contact-info-value">
+                  <a href="https://www.etijon.org" target="_blank" style="color: inherit; text-decoration: underline;">WWW.ETIJON.ORG</a>
+                </div>
               </div>
             </div>
           </div>
@@ -90,7 +93,12 @@
         <div class="contact-form-card">
           <h2 class="contact-form-title">CONTACT FORM</h2>
           
-          <form action="#" method="POST">
+          <!-- Success Notification Banner -->
+          <div id="contact-success-banner" style="display: none; background-color: #E6F4EA; border: 1px solid #34A853; color: #137333; padding: 16px; border-radius: 12px; margin-bottom: 20px; font-size: 0.95rem; font-weight: 600;">
+            ✓ Thank you! Your message has been sent to info@etijon.org. We will respond within 24-48 hours.
+          </div>
+
+          <form action="mailto:info@etijon.org" method="POST" enctype="text/plain" id="contact-form">
             
             <div class="form-group">
               <label for="contact-name" class="form-label">Name</label>
@@ -127,6 +135,32 @@
 
   <!-- Component Inserter Script -->
   <script src="assets/js/header-footer.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactForm = document.getElementById('contact-form');
+      const successBanner = document.getElementById('contact-success-banner');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('contact-name').value;
+          const email = document.getElementById('contact-email').value;
+          const subject = document.getElementById('contact-subject').value;
+          const message = document.getElementById('contact-message').value;
+
+          // Trigger mailto client
+          window.location.href = `mailto:info@etijon.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message)}`;
+
+          // Show success toast feedback
+          if (successBanner) {
+            successBanner.style.display = 'block';
+          }
+          contactForm.reset();
+        });
+      }
+    });
+  </script>
 
 </body>
 </html>
