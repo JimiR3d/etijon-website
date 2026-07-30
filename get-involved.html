@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/about.css">
-  <link rel="stylesheet" href="assets/css/gallery.css">
   <link rel="stylesheet" href="assets/css/get-involved.css">
 </head>
 <body>
@@ -130,21 +129,24 @@
 
   </main>
 
-  <!-- Interactive Donation Lightbox Modal -->
-  <div class="gallery-lightbox" id="donation-modal">
-    <div class="lightbox-content" style="background: #FFFFFF; padding: 40px; border-radius: 28px; color: var(--primary-color); max-width: 480px; text-align: center;">
-      <button class="lightbox-close" id="donation-modal-close" style="color: var(--primary-color); top: 12px; right: 16px;">&times;</button>
+  <!-- Interactive Donation Lightbox Modal (100% Hidden Until Clicked) -->
+  <div class="donation-modal-overlay" id="donation-modal">
+    <div style="position: relative; background: #FFFFFF; padding: 40px 36px; border-radius: 28px; color: var(--primary-color); max-width: 440px; width: 100%; text-align: center; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);">
+      
+      <button id="donation-modal-close" style="position: absolute; top: 16px; right: 16px; background: rgba(0, 29, 80, 0.08); border: none; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--primary-color);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
 
-      <div style="font-size: 0.85rem; font-weight: 800; color: var(--secondary-color); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px;">THANK YOU FOR YOUR SUPPORT</div>
-      <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 12px;" id="modal-tier-title">Donate $25</h3>
-      <p style="font-size: 0.95rem; color: #555555; margin-bottom: 24px;" id="modal-tier-desc">Your generous donation helps us provide essential educational tools and services.</p>
+      <div style="font-size: 0.82rem; font-weight: 800; color: var(--secondary-color); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px;">THANK YOU FOR YOUR SUPPORT</div>
+      <h3 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 12px;" id="modal-tier-title">Donate $25</h3>
+      <p style="font-size: 0.92rem; color: #555555; margin-bottom: 24px; line-height: 1.5;" id="modal-tier-desc">Your generous donation helps us provide essential educational tools and services.</p>
 
-      <div style="background-color: #0A0F1D; padding: 20px; border-radius: 16px; margin-bottom: 24px; color: #FFFFFF;">
-        <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--secondary-color); font-weight: 800; margin-bottom: 6px;">ZELLE PAYMENT MEMO</div>
-        <div style="font-size: 1.2rem; font-weight: 800;">info@etijon.org</div>
+      <div style="background-color: #0A0F1D; padding: 20px; border-radius: 18px; margin-bottom: 24px; color: #FFFFFF;">
+        <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--secondary-color); font-weight: 800; margin-bottom: 6px;">ZELLE PAYMENT MEMO</div>
+        <div style="font-size: 1.25rem; font-weight: 800; letter-spacing: 0.5px;">info@etijon.org</div>
       </div>
 
-      <button onclick="document.getElementById('donation-modal').classList.remove('active'); document.body.style.overflow='';" style="background: var(--primary-color); color: #FFFFFF; font-weight: 700; padding: 14px 28px; border-radius: 12px; border: none; cursor: pointer; width: 100%;">Close</button>
+      <button id="btn-modal-close-action" style="background: var(--primary-color); color: #FFFFFF; font-weight: 700; padding: 14px 28px; border-radius: 12px; border: none; cursor: pointer; width: 100%;">Close</button>
     </div>
   </div>
 
@@ -158,9 +160,17 @@
     document.addEventListener('DOMContentLoaded', () => {
       const modal = document.getElementById('donation-modal');
       const modalClose = document.getElementById('donation-modal-close');
+      const btnCloseAction = document.getElementById('btn-modal-close-action');
       const modalTitle = document.getElementById('modal-tier-title');
       const modalDesc = document.getElementById('modal-tier-desc');
       const triggers = document.querySelectorAll('.tier-trigger, #btn-donate-now-action');
+
+      function closeModal() {
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
 
       triggers.forEach(trigger => {
         trigger.addEventListener('click', (e) => {
@@ -171,23 +181,20 @@
           modalTitle.textContent = amount ? `Donate ${amount} — ${tier}` : 'Donate to Etijon Foundation';
           modalDesc.textContent = `You can easily complete your ${amount || ''} contribution via Zelle using our registered email address: info@etijon.org`;
           
-          modal.classList.add('active');
-          document.body.style.overflow = 'hidden';
+          if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          }
         });
       });
 
-      if (modalClose) {
-        modalClose.addEventListener('click', () => {
-          modal.classList.remove('active');
-          document.body.style.overflow = '';
-        });
-      }
+      if (modalClose) modalClose.addEventListener('click', closeModal);
+      if (btnCloseAction) btnCloseAction.addEventListener('click', closeModal);
 
       if (modal) {
         modal.addEventListener('click', (e) => {
           if (e.target === modal) {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
+            closeModal();
           }
         });
       }
