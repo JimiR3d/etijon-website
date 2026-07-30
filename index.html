@@ -14,43 +14,19 @@
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/home.css?v=105">
-
-  <style>
-    /* Clean transparent navbar overlay for Homepage Hero */
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background: transparent !important;
-      border-bottom: none !important;
-      box-shadow: none !important;
-      backdrop-filter: none !important;
-    }
-    .hero-overlay .header-container {
-      background: transparent !important;
-      border: none !important;
-      box-shadow: none !important;
-    }
-    .hero-overlay::before,
-    .hero-overlay::after {
-      content: none !important;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/home.css?v=200">
 </head>
 <body>
 
   <!-- Dynamic Site Header -->
-  <header class="site-header hero-overlay" id="header-placeholder"></header>
+  <header class="site-header" id="header-placeholder"></header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section (Exact Figma Match) -->
   <section class="hero-section">
     <div class="hero-container">
       <div class="hero-content">
         <h1 class="hero-title">
-          SUPPORTING CHILDREN,
+          SUPPORTING CHILDREN,<br>
           <span class="text-gold">IMPACTING LIVES</span>
         </h1>
         <p class="hero-subtitle">
@@ -60,16 +36,18 @@
           <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-7439" target="_blank" rel="noopener noreferrer" class="btn-hero-primary">Donate</a>
           <a href="get-involved.html" class="btn-hero-outline">
             Get Involved
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Impact Stats Banner -->
+  <!-- Impact Stats Banner (Exact Figma Match) -->
   <section class="impact-stats-section">
     <div class="stats-container">
+      
+      <!-- Stat 1 -->
       <div class="stat-card">
         <div class="stat-icon-wrapper">
           <img src="assets/images/icons/people.png" alt="Students Supported" class="stat-icon-img">
@@ -79,6 +57,8 @@
           <span class="stat-label">Students<br>Supported</span>
         </div>
       </div>
+
+      <!-- Stat 2 -->
       <div class="stat-card">
         <div class="stat-icon-wrapper">
           <img src="assets/images/icons/book.png" alt="Exercise Books" class="stat-icon-img">
@@ -88,110 +68,98 @@
           <span class="stat-label">Exercise<br>Books</span>
         </div>
       </div>
+
+      <!-- Stat 3 -->
       <div class="stat-card">
         <div class="stat-icon-wrapper">
-          <img src="assets/images/icons/computer.png" alt="Digital Literacy" class="stat-icon-img">
+          <img src="assets/images/icons/shopping-bag.png" alt="Backpacks Distributed" class="stat-icon-img">
         </div>
         <div class="stat-info">
-          <span class="stat-number">100+</span>
-          <span class="stat-label">Digital<br>Literacy</span>
+          <span class="stat-number">200+</span>
+          <span class="stat-label">Backpacks with School<br>supplies distributed</span>
         </div>
       </div>
+
+      <!-- Stat 4 -->
       <div class="stat-card">
         <div class="stat-icon-wrapper">
-          <img src="assets/images/icons/hospital.png" alt="Health Outreach" class="stat-icon-img">
+          <img src="assets/images/icons/lovely.png" alt="Sanitary Pads" class="stat-icon-img">
         </div>
         <div class="stat-info">
-          <span class="stat-number">1500+</span>
-          <span class="stat-label">Health<br>Outreach</span>
+          <span class="stat-number">200+</span>
+          <span class="stat-label">Softcare Sanitary<br>Pads</span>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- Our Programs Summary Section -->
+  <!-- Our Programs Section (Exact Figma 4-Column Outline Cards with Isolated Transparent PNGs) -->
   <section class="home-programs-section">
     <div class="section-container">
       
-      <div class="section-header">
-        <div>
-          <span class="section-badge">WHAT WE DO</span>
-          <h2 class="section-heading">Our Programs</h2>
-        </div>
-        <a href="our-programs.html" class="link-view-all">
-          View all programs
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
+      <span class="section-badge">OUR PROGRAMS</span>
+      <h2 class="section-heading">What We Have to Offer</h2>
 
-      <div class="programs-cards-grid">
+      <div class="programs-4col-grid">
         
-        <!-- Program Card 1: Educational Support -->
-        <div class="home-program-card">
-          <div class="program-img-wrapper">
-            <img src="assets/images/program_photo_1.jpg" alt="Educational Support & Backpack Initiative" class="program-img">
+        <!-- Card 01: Backpacks For Students -->
+        <a href="our-programs.html" class="program-outline-card">
+          <div>
+            <div class="card-num">01</div>
+            <h3 class="card-title">Backpacks For Students</h3>
+            <p class="card-desc">Providing backpacks filled with essential school supplies to help students succeed academically.</p>
           </div>
-          <div class="program-content">
-            <h3 class="program-title">Educational Support</h3>
-            <p class="program-desc">
-              Providing essential school supplies, backpacks, and exercise books to ensure every child is equipped for learning.
-            </p>
-            <a href="our-programs.html" class="program-link">Learn More &rarr;</a>
+          <div class="card-bottom-row">
+            <span class="card-link-text">Learn More &rarr;</span>
+            <img src="assets/images/backpack_illustration.png" alt="Backpacks Illustration" class="card-illustration">
           </div>
-        </div>
-
-        <!-- Program Card 2: Adolescent Health -->
-        <div class="home-program-card">
-          <div class="program-img-wrapper">
-            <img src="assets/images/program_photo_2.jpg" alt="Adolescent Health & Wellness" class="program-img">
-          </div>
-          <div class="program-content">
-            <h3 class="program-title">Adolescent Health & Wellness</h3>
-            <p class="program-desc">
-              Promoting health education, menstrual hygiene awareness, and wellness programs for young people.
-            </p>
-            <a href="our-programs.html" class="program-link">Learn More &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Program Card 3: Digital Divide -->
-        <div class="home-program-card">
-          <div class="program-img-wrapper">
-            <img src="assets/images/program_photo_3.jpg" alt="Bridging the Digital Divide" class="program-img">
-          </div>
-          <div class="program-content">
-            <h3 class="program-title">Bridging the Digital Divide</h3>
-            <p class="program-desc">
-              Empowering youth with digital literacy, computer access, and modern technology skills.
-            </p>
-            <a href="our-programs.html" class="program-link">Learn More &rarr;</a>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Impact Gallery Section -->
-  <section class="home-gallery-section">
-    <div class="section-container">
-      
-      <div class="section-header">
-        <div>
-          <span class="section-badge">SEE THE DIFFERENCE</span>
-          <h2 class="section-heading">Impact Gallery</h2>
-        </div>
-        <a href="gallery.html" class="link-view-all">
-          View full gallery
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
+
+        <!-- Card 02: Adolescent Health & Wellness -->
+        <a href="our-programs.html" class="program-outline-card">
+          <div>
+            <div class="card-num">02</div>
+            <h3 class="card-title">Adolescent Health & Wellness</h3>
+            <p class="card-desc">Promoting health education and awareness programs for adolescents and young adults.</p>
+          </div>
+          <div class="card-bottom-row">
+            <span class="card-link-text">Learn More &rarr;</span>
+            <img src="assets/images/stethoscope_illustration.png" alt="Health Illustration" class="card-illustration">
+          </div>
+        </a>
+
+        <!-- Card 03: Bridging the Digital Divide -->
+        <a href="our-programs.html" class="program-outline-card">
+          <div>
+            <div class="card-num">03</div>
+            <h3 class="card-title">Bridging the Digital Divide</h3>
+            <p class="card-desc">Providing access to digital tools, technology and learning resources</p>
+          </div>
+          <div class="card-bottom-row">
+            <span class="card-link-text">Learn More &rarr;</span>
+            <img src="assets/images/digital_illustration.png" alt="Digital Divide Illustration" class="card-illustration">
+          </div>
+        </a>
+
+        <!-- Card 04: School Uniform Program -->
+        <a href="our-programs.html" class="program-outline-card">
+          <div>
+            <div class="card-num">04</div>
+            <h3 class="card-title">School Uniform Program</h3>
+            <p class="card-desc">Ensuring students have school uniforms so they can attend school with dignity and confidence</p>
+          </div>
+          <div class="card-bottom-row">
+            <span class="card-link-text">Learn More &rarr;</span>
+          </div>
+        </a>
+
       </div>
 
     </div>
   </section>
 
-  <!-- CTA Banner Section -->
+  <!-- CTA Banner Section (Help Us Impact Lives - Exact Figma Match) -->
   <section class="cta-banner-section">
     <div class="cta-banner-container">
       <div class="cta-banner-card">
