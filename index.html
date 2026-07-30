@@ -15,11 +15,35 @@
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/home.css">
+
+  <style>
+    /* Clean transparent navbar overlay for Homepage Hero */
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: transparent !important;
+      border-bottom: none !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
+    }
+    .hero-overlay .header-container {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+    .hero-overlay::before,
+    .hero-overlay::after {
+      content: none !important;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Dynamic Site Header (Sticky Transparent Glass Navigation) -->
-  <header class="site-header" id="header-placeholder"></header>
+  <!-- Dynamic Site Header -->
+  <header class="site-header hero-overlay" id="header-placeholder"></header>
 
   <!-- Hero Section -->
   <section class="hero-section">
