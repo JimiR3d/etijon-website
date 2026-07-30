@@ -83,9 +83,17 @@ function renderHeader() {
     headerElem.classList.add('site-header');
     headerElem.innerHTML = HEADER_HTML;
     
-    // Set active link based on current page filename
+    // Set active link and header page mode (home transparent vs inner solid blue)
     const path = window.location.pathname;
     const page = path.split("/").pop() || "index.html";
+    
+    if (page === "index.html" || page === "") {
+      headerElem.classList.add('home-header');
+      headerElem.classList.remove('inner-header');
+    } else {
+      headerElem.classList.add('inner-header');
+      headerElem.classList.remove('home-header');
+    }
     
     const pageToNavId = {
       "index.html": "nav-home",
