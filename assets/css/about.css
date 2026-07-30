@@ -6,123 +6,144 @@
   padding: 40px 24px 100px;
 }
 
-/* Back Link Bar */
 .back-link-wrapper {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .back-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  background-color: rgba(0, 29, 80, 0.08);
   color: var(--primary-color);
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  background-color: rgba(235, 172, 0, 0.12);
-  padding: 8px 16px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 18px;
   border-radius: 20px;
-  transition: background-color var(--transition-fast);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
 }
 
 .back-link:hover {
-  background-color: rgba(235, 172, 0, 0.25);
+  background-color: rgba(0, 29, 80, 0.15);
+  transform: translateX(-3px);
 }
 
 /* ==========================================================================
-   OUR STORY SECTION
+   OUR STORY & FOUNDER GRID
    ========================================================================== */
-.story-section {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 56px;
-  align-items: flex-start;
+.about-story-section {
   margin-bottom: 100px;
 }
 
-.story-content {
+.story-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.story-text-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-header-badge {
+  display: inline-block;
+  color: var(--secondary-color);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-main-heading {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  line-height: 1.15;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.story-lead-paragraph {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333333;
+  margin-bottom: 32px;
+}
+
+.statement-cards-wrapper {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.story-lead-para {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #444444;
-  margin-bottom: 8px;
-}
-
-/* Mission & Vision Cards */
 .statement-card {
   background-color: #FFFDF8;
-  border: 1px solid rgba(235, 172, 0, 0.3);
-  border-left: 4px solid var(--primary-color);
-  border-radius: var(--radius-md);
-  padding: 28px 32px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  border-left: 5px solid var(--primary-color);
+  border-radius: 0 16px 16px 0;
+  padding: 24px 28px;
+  box-shadow: 0 6px 20px rgba(0, 29, 80, 0.04);
 }
 
 .statement-title {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 800;
-  color: var(--primary-color);
-  letter-spacing: 1px;
-  margin-bottom: 12px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
+  color: var(--primary-color);
+  margin-bottom: 8px;
 }
 
-.statement-text {
-  font-size: 0.95rem;
-  line-height: 1.65;
+.statement-desc {
+  font-size: 0.96rem;
+  line-height: 1.6;
   color: #444444;
-  margin-bottom: 10px;
+
 }
 
-.statement-text:last-child {
-  margin-bottom: 0;
-}
-
-/* Founder Portrait Frame */
-.founder-frame {
+/* Founder Portrait Frame (No White Space, Clean Overlay) */
+.founder-card-wrapper {
   position: relative;
   border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 16px 36px rgba(0, 29, 80, 0.12);
-  border: 1px solid rgba(0, 29, 80, 0.1);
-  background-color: #F8F9FA;
-}
-
-.founder-img {
+  box-shadow: 0 16px 40px rgba(0, 29, 80, 0.12);
+  background-color: var(--primary-color);
+  display: flex;
   width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-
 }
 
-.founder-caption-pill {
+.founder-card-img {
+  width: 100%;
+  height: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+.founder-card-caption {
   position: absolute;
   bottom: 20px;
   left: 20px;
   right: 20px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 30px;
-  padding: 10px 18px;
-  font-size: 0.82rem;
-  font-weight: 700;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
   color: var(--primary-color);
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 12px 18px;
+  border-radius: 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 /* ==========================================================================
    OUR CORE VALUES SECTION
    ========================================================================== */
-.values-section {
+.about-values-section {
   margin-bottom: 100px;
 }
 
@@ -135,120 +156,116 @@
 
 .value-card {
   background-color: #FFFFFF;
-  border: 1px solid rgba(0, 29, 80, 0.12);
-  border-radius: var(--radius-md);
-  padding: 36px 32px;
+  border: 1.5px solid rgba(0, 29, 80, 0.12);
+  border-radius: 24px;
+  padding: 36px 30px;
+  box-shadow: 0 8px 24px rgba(0, 29, 80, 0.05);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .value-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 29, 80, 0.08);
+  box-shadow: 0 16px 36px rgba(0, 29, 80, 0.1);
   border-color: var(--secondary-color);
 }
 
 .value-icon-box {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background-color: rgba(235, 172, 0, 0.15);
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background-color: rgba(235, 172, 0, 0.18);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
-.value-icon-img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
-
-.value-card-title {
-  font-size: 1.15rem;
+.value-title {
+  font-size: 1.4rem;
   font-weight: 800;
   color: var(--primary-color);
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
   margin-bottom: 12px;
+  letter-spacing: -0.2px;
 }
 
-.value-card-desc {
-  font-size: 0.92rem;
-  line-height: 1.6;
+.value-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
   color: #555555;
+
 }
 
 /* ==========================================================================
    MEET THE TEAM SECTION
    ========================================================================== */
-.team-section {
+.about-team-section {
   margin-bottom: 60px;
 }
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px 32px;
   margin-top: 40px;
 }
 
 .team-card {
-  background-color: #EBF0F5;
-  border-radius: var(--radius-md);
+  border-radius: 24px;
   overflow: hidden;
+  background-color: var(--primary-color);
+  box-shadow: 0 12px 30px rgba(0, 29, 80, 0.1);
   display: flex;
   flex-direction: column;
-  min-height: 320px;
-  position: relative;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
-.team-photo-placeholder {
-  flex-grow: 1;
-  background-color: #D9E2EC;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.team-photo-container {
+  height: 280px;
+  overflow: hidden;
+  background-color: #EFEFEF;
+}
+
+.team-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .team-info-badge {
   background-color: var(--primary-color);
-  padding: 16px 20px;
   color: var(--white);
+  padding: 20px;
+  text-align: center;
 }
 
 .team-member-name {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.25;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 4px;
 }
 
 .team-member-role {
-  font-size: 0.82rem;
-  font-weight: 600;
+  font-size: 0.85rem;
   color: var(--secondary-color);
-  margin-top: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .story-section {
+/* Responsive Grid */
+@media (max-width: 992px) {
+  .story-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .values-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .values-grid,
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 640px) {
+  .values-grid,
   .team-grid {
     grid-template-columns: 1fr;
   }

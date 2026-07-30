@@ -73,11 +73,11 @@
             </li>
           </ul>
         </div>
-        <a href="#volunteer-form" class="btn-card-action">Volunteer Now</a>
+        <a href="contact-us.html" class="btn-card-action">Volunteer Now</a>
       </div>
 
-      <!-- Donate Card -->
-      <div class="action-card">
+      <!-- Donate Card (With Official Group 39.png Zelle Card) -->
+      <div class="action-card" id="donate-card">
         <div>
           <div class="action-card-header">
             <div class="action-card-icon">
@@ -87,13 +87,12 @@
           </div>
           <p class="action-card-subtitle">Your contributions directly support education, health programs and community development.</p>
 
-          <!-- Zelle Payment Box -->
-          <div class="zelle-box-wrapper">
-            <div style="font-size: 1.6rem; font-weight: 800; color: #7414CA; letter-spacing: -0.5px;">Zelle</div>
-            <div class="zelle-email">info@etijon.org</div>
+          <!-- Official Zelle Card Asset (Group 39.png) -->
+          <div class="zelle-card-img-wrapper">
+            <img src="assets/images/zelle_card.png" alt="Zelle info@etijon.org" class="zelle-card-img">
           </div>
         </div>
-        <a href="#donate-now" class="btn-card-action">Donate Now</a>
+        <a href="#donate-card" class="btn-card-action" id="btn-donate-now-action">Donate Now</a>
       </div>
 
     </section>
@@ -105,22 +104,22 @@
       <div class="donation-tiers-grid">
         
         <!-- Tier 1: $25 -->
-        <a href="#donate" class="tier-card-img-link">
+        <a href="#donate-card" class="tier-card-img-link tier-trigger" data-amount="$25" data-tier="School Supplies">
           <img src="assets/images/clean_tier_1.png" alt="School Supplies $25" class="tier-card-full-img">
         </a>
 
         <!-- Tier 2: $50 -->
-        <a href="#donate" class="tier-card-img-link">
+        <a href="#donate-card" class="tier-card-img-link tier-trigger" data-amount="$50" data-tier="Backpack Support">
           <img src="assets/images/clean_tier_2.png" alt="Backpack Support $50" class="tier-card-full-img">
         </a>
 
         <!-- Tier 3: $100 -->
-        <a href="#donate" class="tier-card-img-link">
+        <a href="#donate-card" class="tier-card-img-link tier-trigger" data-amount="$100" data-tier="Student Assistance">
           <img src="assets/images/clean_tier_3.png" alt="Student Assistance $100" class="tier-card-full-img">
         </a>
 
         <!-- Tier 4: $500 -->
-        <a href="#donate" class="tier-card-img-link">
+        <a href="#donate-card" class="tier-card-img-link tier-trigger" data-amount="$500" data-tier="Program Sponsorship">
           <img src="assets/images/clean_tier_4.png" alt="Program Sponsorship $500" class="tier-card-full-img">
         </a>
 
@@ -129,11 +128,69 @@
 
   </main>
 
+  <!-- Interactive Donation Lightbox Modal -->
+  <div class="gallery-lightbox" id="donation-modal">
+    <div class="lightbox-content" style="background: #FFFFFF; padding: 40px; border-radius: 28px; color: var(--primary-color); max-width: 480px; text-align: center;">
+      <button class="lightbox-close" id="donation-modal-close" style="color: var(--primary-color); top: 12px; right: 16px;">&times;</button>
+
+      <div style="font-size: 0.85rem; font-weight: 800; color: var(--secondary-color); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px;">THANK YOU FOR YOUR SUPPORT</div>
+      <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 12px;" id="modal-tier-title">Donate $25</h3>
+      <p style="font-size: 0.95rem; color: #555555; margin-bottom: 24px;" id="modal-tier-desc">Your generous donation helps us provide essential educational tools and services.</p>
+
+      <div style="background-color: #0A0F1D; padding: 20px; border-radius: 16px; margin-bottom: 24px; color: #FFFFFF;">
+        <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--secondary-color); font-weight: 800; margin-bottom: 6px;">ZELLE PAYMENT MEMO</div>
+        <div style="font-size: 1.2rem; font-weight: 800;">info@etijon.org</div>
+      </div>
+
+      <button onclick="document.getElementById('donation-modal').classList.remove('active'); document.body.style.overflow='';" style="background: var(--primary-color); color: #FFFFFF; font-weight: 700; padding: 14px 28px; border-radius: 12px; border: none; cursor: pointer; width: 100%;">Close</button>
+    </div>
+  </div>
+
   <!-- Dynamic Site Footer -->
   <footer class="site-footer" id="footer-placeholder"></footer>
 
   <!-- Component Inserter Script -->
   <script src="assets/js/header-footer.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('donation-modal');
+      const modalClose = document.getElementById('donation-modal-close');
+      const modalTitle = document.getElementById('modal-tier-title');
+      const modalDesc = document.getElementById('modal-tier-desc');
+      const triggers = document.querySelectorAll('.tier-trigger, #btn-donate-now-action');
+
+      triggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+          e.preventDefault();
+          const amount = trigger.getAttribute('data-amount') || '';
+          const tier = trigger.getAttribute('data-tier') || 'General Donation';
+          
+          modalTitle.textContent = amount ? `Donate ${amount} — ${tier}` : 'Donate to Etijon Foundation';
+          modalDesc.textContent = `You can easily complete your ${amount || ''} contribution via Zelle using our registered email address: info@etijon.org`;
+          
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      if (modalClose) {
+        modalClose.addEventListener('click', () => {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      }
+
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        });
+      }
+    });
+  </script>
 
 </body>
 </html>

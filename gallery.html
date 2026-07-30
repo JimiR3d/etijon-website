@@ -139,13 +139,21 @@
 
   </main>
 
-  <!-- Lightbox Modal -->
+  <!-- Lightbox Modal with Navigation Controls -->
   <div class="gallery-lightbox" id="gallery-lightbox">
+    <button class="lightbox-nav-btn prev-btn" id="lightbox-prev" aria-label="Previous Photo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    
     <div class="lightbox-content">
       <button class="lightbox-close" id="lightbox-close">&times;</button>
       <img src="" alt="" id="lightbox-img" class="lightbox-img">
       <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
+
+    <button class="lightbox-nav-btn next-btn" id="lightbox-next" aria-label="Next Photo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
   </div>
 
   <!-- Dynamic Site Footer -->
