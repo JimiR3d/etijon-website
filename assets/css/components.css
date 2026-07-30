@@ -1,20 +1,26 @@
 /* Etijon Foundation Header & Footer Reusable Components CSS */
 
+/* Add top body spacing for fixed header */
+body {
+  padding-top: 0;
+}
+
 /* ==========================================================================
-   SITE HEADER & STICKY TRANSPARENT NAVIGATION (ALWAYS STAYS ON TOP)
+   SITE HEADER & FIXED TRANSPARENT GLASS NAVIGATION (ALWAYS PINNED AT TOP)
    ========================================================================== */
 .site-header {
-  position: sticky !important;
+  position: fixed !important;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
   width: 100% !important;
   z-index: 9999 !important;
-  padding: 16px 24px !important;
+  padding: 12px 24px !important;
   backdrop-filter: blur(16px) !important;
   -webkit-backdrop-filter: blur(16px) !important;
-  background: rgba(0, 29, 80, 0.4) !important; /* Transparent glass top bar */
-  transition: background 0.3s ease;
+  background: rgba(0, 29, 80, 0.55) !important; /* Translucent glass top bar */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25) !important;
 }
 
 .header-container {
@@ -23,15 +29,11 @@
 }
 
 .main-nav {
-  background: rgba(0, 29, 80, 0.85); /* Translucent navy glass pill */
-  backdrop-filter: blur(16px);
-  border-radius: var(--radius-md);
-  padding: 12px 28px;
+  background: transparent;
+  padding: 4px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .nav-brand {
@@ -42,7 +44,7 @@
 }
 
 .brand-logo-img {
-  height: 42px;
+  height: 44px;
   width: auto;
   object-fit: contain;
 }
@@ -79,7 +81,7 @@
   font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
-  opacity: 0.85;
+  opacity: 0.9;
   transition: opacity var(--transition-fast), color var(--transition-fast);
   position: relative;
   padding: 4px 0;
@@ -114,20 +116,20 @@
   font-weight: 800;
   font-size: 0.85rem;
   letter-spacing: 0.5px;
-  padding: 10px 20px;
+  padding: 10px 22px;
   border-radius: 20px;
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 8px;
   transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
-  box-shadow: 0 4px 12px rgba(235, 172, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(235, 172, 0, 0.35);
 }
 
 .btn-donate-nav:hover {
   background-color: #ffc21a;
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(235, 172, 0, 0.4);
+  box-shadow: 0 6px 16px rgba(235, 172, 0, 0.45);
 }
 
 .mobile-nav-toggle {
@@ -164,6 +166,16 @@
   .mobile-nav-toggle {
     display: block;
   }
+}
+
+/* Add padding for inner page containers so fixed header doesn't overlap content */
+.about-page-container,
+.programs-page-container,
+.gallery-page-container,
+.partners-page-container,
+.contact-page-container,
+.get-involved-container {
+  padding-top: 110px !important;
 }
 
 /* ==========================================================================
