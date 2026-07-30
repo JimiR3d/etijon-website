@@ -38,12 +38,10 @@
   letter-spacing: -0.5px;
   color: var(--white);
   margin-bottom: 24px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
 }
 
-.hero-title .text-gold {
+.text-gold {
   color: var(--secondary-color);
-  display: block;
 }
 
 .hero-subtitle {
@@ -73,6 +71,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   transition: transform var(--transition-fast), background-color var(--transition-fast);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -91,6 +90,7 @@
   font-weight: 700;
   padding: 13px 30px;
   border-radius: var(--radius-sm);
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -103,14 +103,6 @@
   color: var(--primary-color);
   transform: translateY(-2px);
   text-shadow: none;
-}
-
-.btn-hero-outline svg {
-  transition: transform var(--transition-fast);
-}
-
-.btn-hero-outline:hover svg {
-  transform: translateX(4px);
 }
 
 /* ==========================================================================
@@ -176,118 +168,151 @@
 }
 
 /* ==========================================================================
-   OUR PROGRAMS SECTION
+   OUR PROGRAMS SECTION (HOMEPAGE 3-CARD CAROUSEL / GRID)
    ========================================================================== */
+.home-programs-section,
 .programs-section {
-  padding: 100px 24px;
-  background-color: #FFFFFF;
+  padding: 80px 24px 100px;
+  background-color: #F8F9FA;
 }
 
+.section-container,
 .programs-container {
   max-width: 1280px;
   margin: 0 auto;
 }
 
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.section-badge,
 .section-header-badge {
   color: var(--secondary-color);
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: 0.85rem;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 8px;
   display: block;
 }
 
+.section-heading,
 .section-main-heading {
   font-size: 2.5rem;
   font-weight: 800;
   color: var(--primary-color);
-  margin-bottom: 48px;
   letter-spacing: -0.5px;
 }
 
-.programs-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
-}
-
-.program-card {
-  background-color: #FFFFFF;
-  border: 1.5px solid rgba(0, 29, 80, 0.18);
-  border-radius: var(--radius-md);
-  padding: 32px 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 380px;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
-  position: relative;
-  overflow: hidden;
-}
-
-.program-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(0, 29, 80, 0.12);
-  border-color: var(--secondary-color);
-}
-
-.program-card-num {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--secondary-color);
-  margin-bottom: 16px;
-}
-
-.program-card-title {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--primary-color);
-  margin-bottom: 12px;
-  line-height: 1.25;
-}
-
-.program-card-desc {
-  font-size: 0.94rem;
-  color: #555555;
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-
-.program-card-img-wrapper {
-  margin-top: auto;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: flex-end;
-  height: 110px;
-}
-
-.program-card-img {
-  max-height: 100%;
-  width: auto;
-  object-fit: contain;
-}
-
-.program-card-link {
+.link-view-all {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
-  transition: gap var(--transition-fast);
+  transition: color var(--transition-fast), transform var(--transition-fast);
 }
 
-.program-card-link:hover {
-  gap: 12px;
+.link-view-all:hover {
+  color: var(--secondary-color);
+  transform: translateX(4px);
+}
+
+.programs-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.home-program-card {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 29, 80, 0.08);
+  border: 1px solid rgba(0, 29, 80, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.home-program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 29, 80, 0.15);
+  border-color: var(--secondary-color);
+}
+
+.program-img-wrapper {
+  height: 220px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #EAECEF;
+}
+
+.program-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.program-content {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.program-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  line-height: 1.25;
+  margin-bottom: 12px;
+  letter-spacing: -0.2px;
+}
+
+.program-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #555555;
+  margin-bottom: 24px;
+}
+
+.program-link {
+  color: var(--secondary-color);
+  font-weight: 800;
+  font-size: 0.92rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform var(--transition-fast);
+}
+
+.program-link:hover {
+  transform: translateX(4px);
 }
 
 /* ==========================================================================
-   HELP US IMPACT LIVES CTA BANNER
+   IMPACT GALLERY PREVIEW SECTION
+   ========================================================================== */
+.home-gallery-section {
+  padding: 80px 24px 100px;
+  background-color: #FFFFFF;
+}
+
+/* ==========================================================================
+   CTA BANNER SECTION
    ========================================================================== */
 .cta-banner-section {
-  padding: 60px 24px 100px;
+  padding: 0 24px 100px;
   background-color: #FFFFFF;
 }
 
@@ -298,15 +323,15 @@
 
 .cta-banner-card {
   background-color: var(--primary-color);
-  border-radius: var(--radius-lg);
-  padding: 64px 40px;
+  border-radius: 24px;
+  padding: 56px 40px;
   text-align: center;
   color: var(--white);
-  box-shadow: 0 20px 40px rgba(0, 29, 80, 0.2);
+  box-shadow: 0 16px 40px rgba(0, 29, 80, 0.18);
 }
 
 .cta-banner-heading {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: var(--white);
   margin-bottom: 16px;
@@ -314,17 +339,17 @@
 }
 
 .cta-banner-subtitle {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 640px;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 680px;
   margin: 0 auto 36px;
   line-height: 1.6;
 }
 
 .cta-banner-actions {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -332,71 +357,47 @@
 .btn-cta-gold {
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  font-size: 0.98rem;
-  font-weight: 700;
-  padding: 14px 32px;
-  border-radius: var(--radius-sm);
-  box-shadow: 0 6px 16px rgba(235, 172, 0, 0.3);
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 15px 36px;
+  border-radius: 10px;
+  text-decoration: none;
   transition: transform var(--transition-fast), background-color var(--transition-fast);
+  box-shadow: 0 6px 18px rgba(235, 172, 0, 0.35);
 }
 
 .btn-cta-gold:hover {
-  background-color: #f5b800;
+  background-color: #ffc21a;
   transform: translateY(-2px);
 }
 
 .btn-cta-gold-outline {
-  background: transparent;
-  color: var(--secondary-color);
-  border: 2px solid var(--secondary-color);
-  font-size: 0.98rem;
-  font-weight: 700;
-  padding: 13px 30px;
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-fast);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 15px 36px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
 }
 
 .btn-cta-gold-outline:hover {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
+  background-color: #ffc21a;
   transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN (HOME PAGE)
-   ========================================================================== */
+/* Responsive Grid */
 @media (max-width: 1024px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-
+  .programs-cards-grid,
   .stats-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .programs-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 640px) {
-  .hero-title {
-    font-size: 2.2rem;
-  }
-
+  .programs-cards-grid,
   .stats-container {
     grid-template-columns: 1fr;
-  }
-
-  .programs-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-banner-heading {
-    font-size: 2rem;
-  }
-
-  .cta-banner-card {
-    padding: 40px 20px;
   }
 }
