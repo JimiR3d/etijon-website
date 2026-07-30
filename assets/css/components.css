@@ -1,20 +1,15 @@
 /* Etijon Foundation Header & Footer Reusable Components CSS */
 
 /* ==========================================================================
-   SITE HEADER & STICKY TRANSPARENT NAVIGATION (ALWAYS STAYS ON TOP)
+   SITE HEADER & NAVIGATION
    ========================================================================== */
 .site-header {
-  position: sticky !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  width: 100% !important;
-  z-index: 9999 !important;
-  padding: 16px 24px !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  background: rgba(0, 29, 80, 0.4) !important; /* Transparent glass top bar */
-  transition: background 0.3s ease;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 24px;
 }
 
 .header-container {
@@ -23,15 +18,14 @@
 }
 
 .main-nav {
-  background: rgba(0, 29, 80, 0.85); /* Translucent navy glass pill */
-  backdrop-filter: blur(16px);
+  background-color: var(--primary-color);
   border-radius: var(--radius-md);
   padding: 12px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-brand {
@@ -54,50 +48,48 @@
 }
 
 .brand-name-gold {
-  color: var(--secondary-color);
+  font-size: 1.15rem;
   font-weight: 800;
-  font-size: 1.25rem;
+  color: var(--secondary-color);
   letter-spacing: 0.5px;
 }
 
 .brand-name-sub {
-  color: var(--white);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 1.5px;
-  opacity: 0.9;
+  color: var(--white);
+  letter-spacing: 0.8px;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
 }
 
 .nav-link {
   color: var(--white);
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  opacity: 0.85;
-  transition: opacity var(--transition-fast), color var(--transition-fast);
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 6px 0;
   position: relative;
-  padding: 4px 0;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .nav-link:hover,
 .nav-link.active {
-  opacity: 1;
   color: var(--secondary-color);
 }
 
 .nav-link.active::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: var(--secondary-color);
   border-radius: 2px;
 }
@@ -111,98 +103,123 @@
 .btn-donate-nav {
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  font-weight: 800;
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
+  font-size: 0.88rem;
+  font-weight: 700;
   padding: 10px 20px;
-  border-radius: 20px;
-  text-decoration: none;
-  display: flex;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
-  box-shadow: 0 4px 12px rgba(235, 172, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
 }
 
 .btn-donate-nav:hover {
-  background-color: #ffc21a;
+  background-color: #f5b800;
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(235, 172, 0, 0.4);
 }
 
+/* Mobile Nav Toggle Button */
 .mobile-nav-toggle {
   display: none;
   background: transparent;
   border: none;
   color: var(--white);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   cursor: pointer;
+  padding: 4px;
+}
+
+/* Transparent Header Override for Homepage Hero Overlay */
+header.site-header.hero-overlay {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  padding: 24px 0 !important;
+}
+
+header.site-header.hero-overlay .main-nav {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 12px 0 !important;
 }
 
 /* Responsive Navigation */
 @media (max-width: 992px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
   .nav-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 90px;
     left: 24px;
     right: 24px;
     background-color: var(--primary-color);
-    flex-direction: column;
-    padding: 24px;
     border-radius: var(--radius-md);
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
     box-shadow: var(--shadow-lg);
-    gap: 16px;
-    margin-top: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    display: none;
+    z-index: 999;
   }
 
   .nav-menu.open {
     display: flex;
   }
 
-  .mobile-nav-toggle {
-    display: block;
+  .nav-actions {
+    margin-left: auto;
   }
 }
 
 /* ==========================================================================
-   GLASSMOPHISM SITE FOOTER
+   SITE FOOTER (EXACT MATCH FOR components_preview_full_1785346029315.png)
    ========================================================================== */
 .site-footer {
-  background-color: var(--bg-color);
   position: relative;
-  padding: 60px 24px 30px;
+  width: 100%;
+  background: url('../images/footer-bg.jpg') center center / cover no-repeat;
+  padding: 80px 24px 40px;
+  margin-top: auto;
   overflow: hidden;
 }
 
-/* Footer Background Image with Dark Overlay */
 .site-footer::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../images/footer_bg.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.18;
-  z-index: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 29, 80, 0.35) 100%);
+  z-index: 1;
 }
 
 .footer-glass-card {
   position: relative;
-  z-index: 1;
-  max-width: 1280px;
-  margin: 0 auto 40px;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 48px 56px;
+  padding: 50px 60px;
+  color: var(--white);
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.4fr 1fr;
   gap: 60px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .footer-brand-col {
@@ -219,35 +236,40 @@
 }
 
 .footer-tagline {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
   max-width: 440px;
+  font-weight: 400;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .footer-contact-link {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .footer-contact-link span {
   color: var(--secondary-color);
-  font-weight: 700;
 }
 
 .footer-links-col {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  padding-left: 60px;
 }
 
 .footer-heading {
-  color: var(--white);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
+  color: var(--white);
   position: relative;
   padding-bottom: 8px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .footer-heading::after {
@@ -255,67 +277,74 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 32px;
-  height: 2px;
+  width: 36px;
+  height: 3px;
   background-color: var(--secondary-color);
+  border-radius: 2px;
 }
 
 .footer-links-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .footer-link {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: color var(--transition-fast), transform var(--transition-fast);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
 }
 
-.footer-link:hover {
+.footer-link:hover,
+.footer-link.active {
   color: var(--secondary-color);
-  transform: translateX(3px);
+  padding-left: 4px;
 }
 
 .footer-bottom {
   position: relative;
-  z-index: 1;
-  max-width: 1280px;
-  margin: 0 auto;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 36px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.85rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 24px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.88rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .footer-bottom-links {
   display: flex;
-  gap: 24px;
+  gap: 20px;
 }
 
 .footer-bottom-links a {
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
-  transition: color var(--transition-fast);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .footer-bottom-links a:hover {
-  color: var(--white);
+  color: var(--secondary-color);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .footer-glass-card {
     grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 36px 32px;
+    padding: 36px 28px;
+    gap: 36px;
   }
-}
 
-@media (max-width: 640px) {
+  .footer-links-col {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    padding-top: 28px;
+  }
+
   .footer-bottom {
     flex-direction: column;
     gap: 12px;
