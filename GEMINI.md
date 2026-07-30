@@ -6,7 +6,7 @@ Etijon is a charity foundation website pixel-perfect recreation based on Figma d
 ## Stack
 - **Frontend:** HTML5, CSS3 (Vanilla CSS with CSS Custom Properties/Variables), Vanilla JavaScript
 - **Fonts:** Inter (via Google Fonts)
-- **Deployment:** Static Web Application
+- **Deployment:** Static Web Application (Live GitHub: `https://github.com/JimiR3d/etijon-website`)
 
 ## Design Tokens
 - `--primary-color`: `#001D50`
@@ -15,7 +15,7 @@ Etijon is a charity foundation website pixel-perfect recreation based on Figma d
 - `--font-family`: `'Inter', sans-serif`
 
 ## Current State
-- **Status:** ALL PAGES COMPLETED & VERIFIED!
+- **Status:** ALL 7 PAGES & UI REFINEMENTS COMPLETED, VERIFIED & PUSHED TO GITHUB!
   1. Homepage (`index.html`)
   2. About Us (`about-us.html`)
   3. Our Programs (`our-programs.html`)

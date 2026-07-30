@@ -18,7 +18,7 @@
 }
 
 /* ==========================================================================
-   FEATURED PROGRAMS 2x2 GRID (PRISTINE FIGMA ASSETS FROM GROUP 41)
+   FEATURED PROGRAMS 2x2 GRID (EXACT FIGMA #FFF8E7 LIVE HTML CARDS)
    ========================================================================== */
 .programs-featured-grid {
   display: grid;
@@ -27,30 +27,79 @@
   margin-bottom: 80px;
 }
 
-.program-card-link {
-  display: block;
+.program-live-card {
+  background-color: #FFF8E7; /* Exact Figma warm cream background */
   border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 29, 80, 0.06);
+  display: flex;
+  height: 280px;
+  box-shadow: 0 10px 30px rgba(0, 29, 80, 0.06);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  text-decoration: none;
+  color: inherit;
 }
 
-.program-card-link:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(0, 29, 80, 0.15);
+.program-live-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0, 29, 80, 0.14);
 }
 
-.program-card-img {
+.program-card-content {
+  flex: 1.15;
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.program-card-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  line-height: 1.2;
+  margin-bottom: 14px;
+  letter-spacing: -0.4px;
+}
+
+.program-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #4A5264;
+}
+
+.program-card-photo-wrapper {
+  flex: 0.85;
+  height: 100%;
+  overflow: hidden;
+}
+
+.program-card-photo {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* Responsive Grid */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .programs-featured-grid {
     grid-template-columns: 1fr;
     gap: 28px;
+  }
+
+  .program-live-card {
+    height: auto;
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  .program-live-card {
+    flex-direction: column;
+  }
+
+  .program-card-photo-wrapper {
+    height: 200px;
+    width: 100%;
   }
 }
