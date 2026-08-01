@@ -2,9 +2,9 @@
 
 ## Session Log
 
-### Session 2026-08-01 — Contact Us Background Graphics Update
+### Session 2026-08-01 — Our Programs Page Card Photo Fix
 **Tasks completed:**
-- **Contact Us Background (`contact-us.html` & `contact.css`):** Added top-right and bottom-left soft yellow background circles (`#FDF5D8`) and floating dots matching Figma export.
+- **Our Programs Page (`our-programs.html`):** Updated Card 4 (*School Uniform Program*) photo to `program_photo_4.jpg` (*Two school children in pink/grey uniforms sitting on the window sill with books on their heads*).
 - **GitHub Push:** Committed and pushed to `https://github.com/JimiR3d/etijon-website`.
 
 **Status:**
