@@ -2,10 +2,11 @@
 
 ## Session Log
 
-### Session 2026-07-30 — Floating Glass Capsule Navbar & Sticky Scroll
+### Session 2026-07-30 — Page-Specific Navbar & High-Res Footer Background
 **Tasks completed:**
-- **Floating Glass Capsule Navbar:** Updated `.site-header` and `.main-nav` in `assets/css/components.css` to render a translucent frosted glass capsule floating near the top of the viewport with a gold active page indicator.
-- **Sticky Vertical Scroll:** Enforced `position: fixed` header so the floating glass capsule navbar remains pinned to the top of the screen when scrolling down any page.
+- **Inner Page Solid Navy Navbar:** Configured `.site-header.inner-header .main-nav` to use solid primary navy blue (`#001D50`) on all inner pages (`about-us.html`, `our-programs.html`, `gallery.html`, `our-partners.html`, `contact-us.html`, `get-involved.html`) for 100% legibility of white menu links.
+- **Homepage Translucent Glass Navbar:** Kept `.site-header.home-header .main-nav` as translucent frosted glass floating over the hero photo.
+- **Footer Background Photo:** Applied `photo_2026-07-30_10-21-52.jpg` as the full background photo behind the centered translucent frosted glass footer card.
 - **GitHub Push:** Committed and pushed to `https://github.com/JimiR3d/etijon-website`.
 
 **Status:**
