@@ -2,11 +2,12 @@
 
 ## Session Log
 
-### Session 2026-07-30 — Page-Specific Navbar & High-Res Footer Background
+### Session 2026-08-01 — Integration of New Assets from `New assets/New`
 **Tasks completed:**
-- **Inner Page Solid Navy Navbar:** Configured `.site-header.inner-header .main-nav` to use solid primary navy blue (`#001D50`) on all inner pages (`about-us.html`, `our-programs.html`, `gallery.html`, `our-partners.html`, `contact-us.html`, `get-involved.html`) for 100% legibility of white menu links.
-- **Homepage Translucent Glass Navbar:** Kept `.site-header.home-header .main-nav` as translucent frosted glass floating over the hero photo.
-- **Footer Background Photo:** Applied `photo_2026-07-30_10-21-52.jpg` as the full background photo behind the centered translucent frosted glass footer card.
+- **Meet the Team Photos (`about-us.html`):** Updated high-res team photos for Efiong (`Efiong.png`), Anwana (`Anwana.png`), Eno (`Eno.png`), and Ruth (`Ruth.png`).
+- **Homepage Card 04 Illustration (`index.html`):** Added isolated school uniform transparent PNG illustration (`image 25.png`) to Card 04.
+- **Our Programs Page Card 04 Photo (`our-programs.html`):** Added high-res school uniform program photo (`image 24.png`) to Card 04.
+- **Zero Code Contamination:** No existing code, CSS layouts, or working logic was tampered with or altered.
 - **GitHub Push:** Committed and pushed to `https://github.com/JimiR3d/etijon-website`.
 
 **Status:**
