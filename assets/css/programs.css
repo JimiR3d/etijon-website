@@ -28,47 +28,48 @@
 }
 
 .program-live-card {
-  background-color: #FFF8E7 !important; /* Pure Figma warm yellow cream background */
-  border-radius: 28px;
+  background-color: #FFFFFF !important;
+  border-radius: 20px;
+  border: 1.5px solid rgba(0, 29, 80, 0.12) !important;
   overflow: hidden;
   display: flex;
   height: 280px;
-  box-shadow: 0 10px 30px rgba(0, 29, 80, 0.06);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 4px 16px rgba(0, 29, 80, 0.04);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
   text-decoration: none;
   color: inherit;
-  border: none !important;
 }
 
 .program-live-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 18px 40px rgba(0, 29, 80, 0.14);
-  background-color: #FFF8E7 !important; /* Keep pure cream yellow on hover */
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 29, 80, 0.1);
+  border-color: var(--secondary-color) !important;
+  background-color: #FFFFFF !important;
 }
 
 .program-card-content {
-  flex: 1.15;
-  padding: 40px 36px;
+  flex: 1;
+  padding: 32px 36px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-color: #FFF8E7 !important; /* Pure cream yellow background */
+  justify-content: space-between;
+  background-color: #FFFFFF !important;
 }
 
 .program-card-title {
-  font-size: 1.85rem;
+  font-size: 1.75rem;
   font-weight: 800;
   color: var(--primary-color);
   line-height: 1.2;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   letter-spacing: -0.4px;
 }
 
 .program-card-desc {
-  font-size: 0.92rem;
-  line-height: 1.6;
-  color: #4A5264;
-  margin-bottom: 12px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #666666;
+  margin-bottom: 16px;
 }
 
 /* WHAT IT COVERS BADGES (EXACT FIGMA MATCH) */
@@ -79,11 +80,11 @@
 .covers-label {
   font-size: 0.68rem;
   font-weight: 800;
-  color: var(--secondary-color);
+  color: #B88600;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .covers-badges-row {
@@ -94,20 +95,22 @@
 }
 
 .badge-pill {
-  background-color: rgba(235, 172, 0, 0.18);
-  color: var(--primary-color);
+  background-color: #FFF9E6;
+  color: #8C6600;
   font-size: 0.72rem;
   font-weight: 700;
   padding: 4px 12px;
   border-radius: 12px;
   letter-spacing: 0.2px;
+  border: 1px solid rgba(235, 172, 0, 0.25);
 }
 
 .program-card-photo-wrapper {
-  flex: 0.85;
+  width: 212px;
   height: 100%;
+  flex-shrink: 0;
   overflow: hidden;
-  background-color: #FFF8E7 !important;
+  background-color: #FFFFFF !important;
 }
 
 .program-card-photo {

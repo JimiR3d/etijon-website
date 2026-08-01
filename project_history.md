@@ -2,9 +2,9 @@
 
 ## Session Log
 
-### Session 2026-08-01 — Our Programs Page Card Photo Fix
+### Session 2026-08-01 — Our Programs Page Exact Figma Update
 **Tasks completed:**
-- **Our Programs Page (`our-programs.html`):** Updated Card 4 (*School Uniform Program*) photo to `program_photo_4.jpg` (*Two school children in pink/grey uniforms sitting on the window sill with books on their heads*).
+- **Our Programs Page (`our-programs.html` & `programs.css`):** Re-ordered 2x2 grid cards, set Photo Left for Cards 2 and 4, and added "WHAT IT COVERS" gold pill badges matching exact Figma export.
 - **GitHub Push:** Committed and pushed to `https://github.com/JimiR3d/etijon-website`.
 
 **Status:**
