@@ -343,11 +343,171 @@
   transform: translateY(-2px);
 }
 
+/* ==========================================================================
+   WHO WE ARE SECTION (EXACT FIGMA MATCH WITH OVERLAPPING DUAL IMAGES & DECORATIVE GRAPHIC)
+   ========================================================================== */
+.home-who-we-are-section {
+  padding: 80px 24px 100px;
+  background-color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.who-we-are-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+}
+
+/* Left Content Column */
+.who-we-are-left {
+  position: relative;
+  z-index: 2;
+}
+
+.yellow-circle-bg {
+  position: absolute;
+  bottom: -90px;
+  left: -140px;
+  width: 320px;
+  height: 320px;
+  background-color: #FDF5D8;
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.yellow-dot-bg {
+  position: absolute;
+  top: 140px;
+  left: 120px;
+  width: 60px;
+  height: 60px;
+  background-color: #FDF5D8;
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.who-we-are-desc {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.btn-more-about {
+  background: transparent;
+  color: var(--primary-color);
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 12px 28px;
+  border: 1.5px solid var(--secondary-color);
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  transition: all var(--transition-fast);
+}
+
+.btn-more-about:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Right Overlapping Dual Image Stack */
+.who-we-are-right {
+  position: relative;
+  z-index: 2;
+}
+
+.dual-image-stack {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.stack-top-card {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 29, 80, 0.12);
+}
+
+.stack-bottom-card {
+  position: relative;
+  width: 85%;
+  margin-left: auto;
+  margin-top: -60px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 29, 80, 0.16);
+  border: 4px solid #FFFFFF;
+  z-index: 3;
+}
+
+.stack-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Serving Since 2019 Gold Badge */
+.serving-since-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 6px 14px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge-sub {
+  font-size: 0.58rem;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+.badge-year {
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
 /* Responsive Grid */
 @media (max-width: 1024px) {
   .programs-4col-grid,
   .stats-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .who-we-are-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .stack-bottom-card {
+    margin-top: -40px;
+    width: 90%;
   }
 }
 
