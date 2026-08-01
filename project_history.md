@@ -2,12 +2,10 @@
 
 ## Session Log
 
-### Session 2026-08-01 — Integration of New Assets from `New assets/New`
+### Session 2026-08-01 — Team Photo Unzoom Fix & Page Separation Verification
 **Tasks completed:**
-- **Meet the Team Photos (`about-us.html`):** Updated high-res team photos for Efiong (`Efiong.png`), Anwana (`Anwana.png`), Eno (`Eno.png`), and Ruth (`Ruth.png`).
-- **Homepage Card 04 Illustration (`index.html`):** Added isolated school uniform transparent PNG illustration (`image 25.png`) to Card 04.
-- **Our Programs Page Card 04 Photo (`our-programs.html`):** Added high-res school uniform program photo (`image 24.png`) to Card 04.
-- **Zero Code Contamination:** No existing code, CSS layouts, or working logic was tampered with or altered.
+- **Team Photo Aspect Ratio (`assets/css/about.css`):** Applied `aspect-ratio: 300 / 343;` and `object-position: center top;` so portrait photos (`Efiong.png`, `Anwana.png`, `Eno.png`, `Ruth.png`) render 100% un-cropped and un-zoomed.
+- **Homepage vs Our Programs Separation:** Verified zero mix-up between `index.html` (4 outline cards with transparent PNG icons) and `our-programs.html` (4 large split banner cards with full cover photos).
 - **GitHub Push:** Committed and pushed to `https://github.com/JimiR3d/etijon-website`.
 
 **Status:**
