@@ -2,9 +2,11 @@
 
 ## Session Log
 
-### Session 2026-08-01 — Founder Legacy Portrait Unzoom Fix
+### Session 2026-08-01 — Homepage WHO WE ARE Section & Dual Image Stack
 **Tasks completed:**
-- **Founder Legacy Portrait (`assets/css/about.css`):** Applied `aspect-ratio: 407 / 499;` and `object-fit: contain;` so `founder_portrait.png` (*Late Chief/Very Rev. Etim John Ndekhedehe, JP, Ikpoto Oro*) renders 100% full frame un-cropped from hair top to suit collar.
+- **Homepage WHO WE ARE Section (`index.html` & `home.css`):** Added section between programs grid and CTA banner.
+- **Dual Overlapping Image Stack:** Integrated `image 24.png` (top card with gold `SERVING SINCE 2019` badge) and `image 26.png` (bottom card overlapping underneath).
+- **Decorative Graphics:** Added soft yellow background circles (`#FDF5D8`) behind the left text column.
 - **GitHub Push:** Committed and pushed to `https://github.com/JimiR3d/etijon-website`.
 
 **Status:**

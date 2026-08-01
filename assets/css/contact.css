@@ -14,27 +14,51 @@
   z-index: 1;
 }
 
-/* Background Soft Decorative Circles matching Figma */
+/* Background Soft Decorative Circles & Floating Dots matching Figma */
 .contact-bg-circle-tr {
   position: absolute;
-  top: -40px;
-  right: -80px;
-  width: 320px;
-  height: 320px;
+  top: -80px;
+  right: -120px;
+  width: 360px;
+  height: 360px;
   border-radius: 50%;
-  background-color: rgba(235, 172, 0, 0.12);
+  background-color: #FDF5D8;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact-bg-dot-tr {
+  position: absolute;
+  top: 90px;
+  right: 180px;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: #FDF5D8;
   pointer-events: none;
   z-index: 0;
 }
 
 .contact-bg-circle-bl {
   position: absolute;
-  bottom: 80px;
-  left: -100px;
+  bottom: 20px;
+  left: -140px;
   width: 360px;
   height: 360px;
   border-radius: 50%;
-  background-color: rgba(235, 172, 0, 0.1);
+  background-color: #FDF5D8;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact-bg-dot-bl {
+  position: absolute;
+  bottom: 210px;
+  left: 170px;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: #FDF5D8;
   pointer-events: none;
   z-index: 0;
 }
